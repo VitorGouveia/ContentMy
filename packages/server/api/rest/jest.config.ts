@@ -1,8 +1,13 @@
 import { name } from "./package.json"
+import { compilerOptions } from "./tsconfig.json"
+import { pathsToModuleNameMapper } from "ts-jest/utils"
 
 export default {
   name,
   displayName: name,
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: "<rootDir>/src"
+  }),
   transform: {
     "^.+\\.(t|j)sx?$": [
       "@swc/jest",
