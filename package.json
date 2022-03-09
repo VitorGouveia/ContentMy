@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@esbuild-plugins/tsconfig-paths": "^0.0.4",
+    "dotenv": "^16.0.0",
     "esbuild": "^0.14.25"
   }
 }

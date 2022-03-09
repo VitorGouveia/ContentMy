@@ -1,3 +1,5 @@
 import { app } from "./app"
 
-app.listen(3333, () => console.log("[App]"))
+import { port } from "../constants"
+
+app.listen(port, () => console.log(`[App]: listening on ${port}`))
