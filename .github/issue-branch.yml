@@ -1,0 +1,10 @@
+mode: chatops
+branchName: short
+openDraftPR: true
+branches:
+  - label: enhancement
+    prefix: feature/
+  - label: bug
+    prefix: bug/
+  - label: '*'
+    prefix: issue/
