@@ -21,8 +21,8 @@ export const InvalidEmailError = new Error({
   description: "The input e-mail is invalid."
 })
 
-export type CreateUserRequest = {
-  name: string
+export type CreateUserClientRequest = {
+  username: string
   email: string
   password: string
 }
@@ -33,8 +33,8 @@ export type Success = {
   user: User
 }
 
-// export type CreateUserResponse = Either<Failure<PropsNotFoundError, User>, Success<any, User>>
-export type CreateUserResponse = Either<
+// export type CreateUserClientResponse = Either<Failure<PropsNotFoundError, User>, Success<any, User>>
+export type CreateUserClientResponse = Either<
   typeof UserAlreadyExistsError
   | typeof InvalidEmailError,
   Result<Success>

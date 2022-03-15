@@ -1,3 +1,5 @@
+import "dotenv/config"
+
 import { name } from "./package.json"
 import { compilerOptions } from "./tsconfig.json"
 import { pathsToModuleNameMapper } from "ts-jest/utils"
