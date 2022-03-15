@@ -1,4 +1,6 @@
 node_modules
 __tests__/coverage
 
+.env
+
 packages/**/dist

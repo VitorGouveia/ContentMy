@@ -8,6 +8,8 @@ declare global {
       DATE_PROVIDER_DRIVER: string;
       ACCESS_TOKEN_SECRET: string;
       REFRESH_TOKEN_SECRET: string;
+      STRIPE_KEY: string;
+      STRIPE_SECRET_KEY: string;
     }
   }
 }

@@ -7,7 +7,7 @@ import { DayjsDateProvider } from "@user/infra/framework/providers/dayjs-date-pr
 import { CreateUserRequest } from "@user/domain/contracts/create-user"
 import { CreateUserProducerRequest } from "@user/domain/contracts/create-user-producer"
 
-import { CreateUserAccount } from "@user/domain/use-cases/account/create-user-account/create-user-account-use-case"
+// import { CreateUserAccount } from "@user/domain/use-cases/account/create-user-account/create-user-account-use-case"
 import { CreateUserProducerAccount } from "@user/domain/use-cases/account/create-user-producer-account/create-user-producer-account-use-case"
 
 type Partial<T> = {
@@ -41,13 +41,16 @@ export function userFactory() {
 
       return sut
     },
-    async createUser(overrides?: CreateUserRequest) {
-      const createUserAccount = new CreateUserAccount(usersRepository, refreshTokenRepository, hashProvider, tokenProvider, dateProvider)
+    async createUser(overrides?: Partial<CreateUserRequest>) {
+     const createUserProducer = new CreateUserProducerAccount(usersRepository, refreshTokenRepository, hashProvider, tokenProvider, dateProvider)
 
-      const sut = await createUserAccount.run({
-        name: overrides?.name ?? "test",
-        email: overrides?.email ?? "test@test.com",
-        password: overrides?.password ?? "123"
+      const sut = await createUserProducer.run({
+        fullname: "test",
+        email: "test@test.com",
+        cpf: "111.111.111-11",
+        phoneNumber: "13500131217",
+        password: "123",
+        ...overrides
       })
 
       return sut

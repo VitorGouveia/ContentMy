@@ -14,7 +14,11 @@ const {
 
 describe("Login user account", () => {
   beforeAll(async () => {
-    await createUser()
+    usersRepository.reset()
+    
+    await createUser({
+      email: "test@test.com"
+    })
   })
 
   it("should login user with right credentials", async () => {
