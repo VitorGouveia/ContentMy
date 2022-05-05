@@ -44,7 +44,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn workspaces focus --production --all
 
-      - name: Build @contentmy/rest
-        run: yarn workspace @neo/rest build
+      - name: Build @contentmy/server
+        run: yarn workspace @contentmy/server build
       
       - name: Deploy to Heroku
