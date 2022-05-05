@@ -48,6 +48,7 @@ jobs:
         run: yarn workspace @contentmy/server build
 
       - name: Add procfile
+        working-directory: ./packages/server/dist
         run: |
           echo "web: yarn worksapce @contentmy/server start" >> Procfile
 
