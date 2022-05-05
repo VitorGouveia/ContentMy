@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "workspaces": [
-    "packages/server/api/*"
+    "packages/*"
   ],
   "devDependencies": {
     "@swc/core": "^1.2.151",

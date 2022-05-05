@@ -1,6 +1,6 @@
 {
-  "name": "@contentmy/rest",
-  "description": "The Rest Implementation of the ContentMy features",
+  "name": "@contentmy/server",
+  "description": "ContentMy Server",
   "author": "Vitor Gouveia <vitorneves.gouveia10@gmail.com>",
   "packageManager": "yarn@3.2.0",
   "main": "./dist/index.js",
