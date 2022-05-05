@@ -30,6 +30,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dayjs": "^1.10.8",
+    "dotenv": "^16.0.0",
     "esbuild": "^0.14.25",
     "esbuild-node-externals": "^1.4.1",
     "express": "^4.17.3",
