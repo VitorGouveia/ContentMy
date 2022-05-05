@@ -9,7 +9,7 @@ on:
       - '.github/workflows/build-server.yml'
 
 jobs:
-  rest:
+  server:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -46,7 +46,7 @@ jobs:
 
       - name: Build @contentmy/server
         run: yarn workspace @contentmy/server build
-      
+
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
