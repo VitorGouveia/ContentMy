@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - "packages/server/**"
+      - ".yarnrc.yml"
       - '.github/workflows/build-server.yml'
 
 jobs:
