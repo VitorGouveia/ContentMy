@@ -1,5 +1,3 @@
-import "dotenv/config"
-
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
@@ -190,3 +188,12 @@ export default {
   // Whether to use watchman for file crawling
   // watchman: true,
 };
+
+// @ts-ignore
+process.env = Object.assign(process.env, {
+  PORT: 3333,
+  ACCESS_TOKEN_SECRET: 'secret-token-shhh',
+  REFRESH_TOKEN_SECRET: 'my-access-token-secret',
+  STRIPE_KEY: "empty value",
+  STRIPE_SECRET_KEY: "empty value but secret"
+});
