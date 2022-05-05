@@ -1,1 +1,1 @@
-web: yarn worksapce @contentmy/server start
+web: yarn start
