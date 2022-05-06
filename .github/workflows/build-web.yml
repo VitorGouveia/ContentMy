@@ -37,7 +37,7 @@ jobs:
         run: yarn workspace @contentmy/web build
 
       - name: Export web
-        run: yarn workspace @contentmy/web build
+        run: yarn workspace @contentmy/web export
 
       - name: Add .nojekyll file
         working-directory: ./packages/web
