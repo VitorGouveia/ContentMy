@@ -1,0 +1,26 @@
+.brand-container {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 20px;
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-size: 40px;
+  }
+}
+
+.variant-dark {
+  color: white;
+  background: black;
+}
+
+.variant-light {
+  color: black;
+  background: white;
+}
+
+.variant-transparent {
+  background: transparent;
+}

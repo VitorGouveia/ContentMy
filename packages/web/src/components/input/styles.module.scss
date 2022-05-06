@@ -1,0 +1,19 @@
+.input {
+  border-radius: 12px;
+
+  color: #464646;
+  background: #E2E2E2;
+}
+
+.field {
+  padding: 10px 14px;
+  border: 5px solid transparent;
+  
+  &:focus {
+    border: 3px solid #FF1058;
+  }
+}
+
+.checkbox {
+  accent-color: #DB01FF;
+}

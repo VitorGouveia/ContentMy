@@ -1,0 +1,21 @@
+.button {
+  border: none;
+  outline: none;
+
+  padding: 14px 24px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    filter: brightness(0.9);
+  }
+}

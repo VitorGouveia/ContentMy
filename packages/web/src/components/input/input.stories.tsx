@@ -4,7 +4,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 type InputStory = ComponentStory<typeof Input.Generic>;
 
 export default {
-  title: "Input",
+  title: "Design System/Input",
   component: Input.Generic,
 } as ComponentMeta<typeof Input.Generic>;
 

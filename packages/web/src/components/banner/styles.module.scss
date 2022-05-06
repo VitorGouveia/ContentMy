@@ -1,0 +1,12 @@
+.banner {
+  width: 100%;
+  height: max(20vh, 500px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-size: 54px;
+  }
+}

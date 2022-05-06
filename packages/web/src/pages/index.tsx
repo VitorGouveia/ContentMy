@@ -1,11 +1,3 @@
-import { NextPage } from "next";
+import { Home } from "../screens/home";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <p>brujh</p>
-    </div>
-  )
-}
-
-export default Home
+export default Home;

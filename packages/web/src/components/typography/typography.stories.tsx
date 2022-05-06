@@ -4,7 +4,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 type TypographyStory = ComponentStory<typeof Typography.Generic>;
 
 export default {
-  title: "Typography",
+  title: "Design System/Typography",
   component: Typography.Generic,
 } as ComponentMeta<typeof Typography.Generic>;
 

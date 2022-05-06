@@ -2,18 +2,23 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { Banner } from "./index";
 import { Logo } from "../logo";
+import { Typography } from "../typography";
 
 type BrandStory = ComponentStory<typeof Banner>;
 
 export default {
-  title: "Banner",
+  title: "Design System/Banner",
   component: Banner,
 } as ComponentMeta<typeof Banner>;
 
 export const Default: BrandStory = () => (
   <Banner>
-    <Logo.Primary backgroundColor="transparent" />
+    <Logo.Medium>
+      <Logo.Icon />
+    </Logo.Medium>
 
-    <h1>ContentMy</h1>
+    <Typography.CTA>
+      <Typography.Paragraph>ContentMy</Typography.Paragraph>
+    </Typography.CTA>
   </Banner>
 );

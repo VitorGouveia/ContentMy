@@ -4,7 +4,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 type BrandStory = ComponentStory<typeof Brand.Generic>;
 
 export default {
-  title: "Brand",
+  title: "Design System/Brand",
   component: Brand.Generic,
 } as ComponentMeta<typeof Brand.Generic>;
 

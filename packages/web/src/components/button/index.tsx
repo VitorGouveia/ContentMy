@@ -1,17 +1,29 @@
 import { memo } from "react";
 
+import { Typography } from "../typography";
+
+import styles from "./styles.module.scss";
+
 type GenericButtonProps = {
   /**
    * the content's of the button
    */
   children: React.ReactNode;
 
+  color?: string;
   backgroundColor?: string;
 };
 
 const Generic: React.FC<GenericButtonProps> = memo(
-  ({ children, backgroundColor }) => {
-    return <button style={{ backgroundColor }}>{children}</button>;
+  ({ children, backgroundColor, color }) => {
+    return (
+      <button
+        className={styles.button}
+        style={{ background: backgroundColor, color }}
+      >
+        <Typography.CTA>{children}</Typography.CTA>
+      </button>
+    );
   }
 );
 

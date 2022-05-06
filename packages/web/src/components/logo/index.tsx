@@ -1,18 +1,19 @@
-import { memo } from "react";
+import React, { memo } from "react";
 
-type LogoProps = {
+import styles from "./styles.module.scss";
+
+export type LogoProps = {
   backgroundColor?: string;
   lockColor?: string;
   color?: string;
-
-  size?: "large" | "medium" | "small";
 };
 
 const Generic: React.FC<LogoProps> = memo(
   ({ backgroundColor = "#9B37CC", color = "#9B37CC", lockColor = "#ddd" }) => {
     return (
-      <div>
+      <React.Fragment>
         <svg
+          className={styles.logoSvg}
           width="512"
           height="520"
           viewBox="0 0 512 520"
@@ -36,10 +37,22 @@ const Generic: React.FC<LogoProps> = memo(
             fill={color}
           />
         </svg>
-      </div>
+      </React.Fragment>
     );
   }
 );
+
+const Large: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div className={styles.large}>{children}</div>;
+};
+
+const Medium: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div className={styles.medium}>{children}</div>;
+};
+
+const Small: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div className={styles.small}>{children}</div>;
+};
 
 const Primary: React.FC<LogoProps> = ({ ...props }) => {
   return <Generic {...props} />;
@@ -56,10 +69,19 @@ const Secondary: React.FC<LogoProps> = ({ ...props }) => {
   );
 };
 
-const Monochromatic: React.FC<LogoProps> = () => {
+const Monochromatic: React.FC<LogoProps> = ({ ...props }) => {
   return (
-    <Generic backgroundColor="#1A202C" lockColor="#2D3748" color="#96A7C8" />
+    <Generic
+      backgroundColor="#1A202C"
+      lockColor="#2D3748"
+      color="#96A7C8"
+      {...props}
+    />
   );
+};
+
+const Icon: React.FC<LogoProps> = ({ ...props }) => {
+  return <Generic backgroundColor="transparent" {...props} />;
 };
 
 export const Logo = {
@@ -67,4 +89,8 @@ export const Logo = {
   Primary,
   Secondary,
   Monochromatic,
+  Large,
+  Medium,
+  Small,
+  Icon,
 };
