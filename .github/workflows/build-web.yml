@@ -1,4 +1,4 @@
-name: Build Server
+name: Build Web
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
       - ".github/workflows/build-web.yml"
 
 jobs:
-  server:
+  web:
     runs-on: ${{ matrix.os }}
 
     strategy:
