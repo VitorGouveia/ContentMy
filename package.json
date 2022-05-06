@@ -8,6 +8,9 @@
   "scripts": {
     "test": "jest"
   },
+  "resolutions": {
+    "webpack": "^5"
+  },
   "workspaces": [
     "packages/*"
   ],
