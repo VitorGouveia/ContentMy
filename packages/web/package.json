@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "gh-build": "GH_PAGES=true next build",
+    "export": "next export -o dist",
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ./public/design-system --docs"
   },
   "dependencies": {
     "next": "12.1.6",

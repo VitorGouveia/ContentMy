@@ -1,0 +1,53 @@
+name: Build Server
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "packages/web/**"
+      - ".yarnrc.yml"
+      - ".github/workflows/build-web.yml"
+
+jobs:
+  server:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [14.x]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Remove server package
+        run: rm ./packages/server/package.json
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build web design system
+        run: yarn workspace @contentmy/web build-storybook
+
+      - name: Build web
+        run: yarn workspace @contentmy/web build
+
+      - name: Export web
+        run: yarn workspace @contentmy/web build
+
+      - name: Add .nojekyll file
+        working-directory: ./packages/web
+        run: touch ./dist/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: ./packages/web/dist
