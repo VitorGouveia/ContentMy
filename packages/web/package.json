@@ -35,6 +35,7 @@
     "babel-loader": "^8.2.5",
     "sass-loader": "^12.6.0",
     "storybook-dark-mode": "^1.1.0",
-    "tsconfig-paths-webpack-plugin": "^3.5.2"
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.6.4"
   }
 }
