@@ -1,6 +1,12 @@
 name: Test
 
-on: push
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "packages/server/**"
+      - ".github/workflows/test.yml"
 
 jobs:
   test:
@@ -10,7 +16,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node-version: [14.x]
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -22,6 +28,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-      
+
       - name: Test
         run: yarn test

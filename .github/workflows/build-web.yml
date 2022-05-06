@@ -27,11 +27,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Remove server package
-        run: rm ./packages/server/package.json
-
       - name: Install dependencies
-        run: yarn
+        run: yarn workspaces focus @contentmy/web
 
       - name: Build web design system
         run: yarn workspace @contentmy/web build-storybook
