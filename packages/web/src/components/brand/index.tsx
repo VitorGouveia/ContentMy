@@ -18,9 +18,9 @@ export const Generic: React.FC<GenericBrandProps> = memo(
           styles[`variant-${variant}`]
         }`}
       >
-        <Logo.Medium>
+        <Logo.Small>
           <Logo.Icon lockColor="#9B37CC" color="white" />
-        </Logo.Medium>
+        </Logo.Small>
 
         <Typography.CTA>
           <Typography.Paragraph>{label}</Typography.Paragraph>

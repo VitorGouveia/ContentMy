@@ -1,7 +1,12 @@
 import "../src/styles/global.scss";
-import { themes } from '@storybook/theming'
+import { themes } from "@storybook/theming";
+
+import { RouterContext } from "next/dist/shared/lib/router-context";
 
 export const parameters = {
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -14,9 +19,9 @@ export const parameters = {
     // Override the default dark theme
     dark: { ...themes.dark },
     // Override the default light theme
-    light: { ...themes.light }
-  }
-}
+    light: { ...themes.light },
+  },
+};
 
 import * as NextImage from "next/image";
 
